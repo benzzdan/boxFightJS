@@ -1,0 +1,450 @@
+
+
+/*1356 px */
+/*font size 68px */
+@media screen and (max-width: 1356px) {
+  body {
+
+  }
+
+  #inNum {
+    font-size: 68px;
+  }
+
+  #button1 {
+   width: 26%;
+ }
+}
+
+
+/*1231 px*/
+@media screen and (max-width: 1231px) {
+  body {
+
+  }
+
+  #inNum {
+    font-size: 58px;
+  }
+
+  #button1 {
+   width: 26%;
+ }
+}
+
+/*659px*/
+/* font size : 25px; */
+
+@media screen and (max-width: 659px) {
+  body {
+
+  }
+
+  #inNum {
+    font-size: 25px;
+height: 2%;
+width: 45%;
+  }
+
+  #button1 {
+   width: 30%;
+ }
+}
+
+/*430px */
+
+@media screen and (max-width: 447px) {
+  #stage {
+    margin-top: 35%;
+  }
+  #inNum {
+    font-size: 25px;
+        height: 2%;
+        width: 45%;
+        margin-top: 2%;
+  }
+
+  #button1 {
+   width: 26%;
+ }
+
+
+}
+
+@media screen and (min-width: 336px) {
+
+  #inNum {
+    font-size: 22px;
+        height: 2%;
+        width: 42%;
+        margin-top: 6%;
+  }
+
+  #button1 {
+    width: 29%;
+  }
+
+}
+
+
+@media screen and (max-width: 336px) {
+
+  #inNum {
+    font-size: 22px;
+        height: 2%;
+        width: 34%;
+        margin-top: 1%;
+
+  }
+
+  #button1 {
+    width: 24%;
+  }
+}
+
+@media screen and (min-width: 562px) {
+
+  #inNum {
+    font-size: 38px;
+      width: 47%;
+}
+
+  }
+
+
+/*491px hasta 659px */
+
+
+@media screen and (min-width: 513px) {
+
+  #inNum {
+    font-size: 21px;
+        height: 2%;
+        width: 28%;
+        margin-top: 1%;
+
+  }
+
+  #button1 {
+    width: 21%;
+  }
+}
+
+@media screen and (min-width: 589px) {
+
+  #inNum {
+    font-size: 24px;
+        height: 2%;
+        width: 29%;
+
+  }
+
+  #button1 {
+    width: 21%;
+  }
+}
+
+
+@media screen and (min-width: 649px) {
+
+  #inNum {
+    font-size: 38px;
+        width: 50%;
+
+  }
+}
+
+@media screen and (min-width: 663px) {
+
+  #inNum {
+    font-size: 30px;
+        width: 25%;
+
+  }
+
+  #button1 {
+    width: 13%;
+  }
+}
+
+
+
+@media screen and (min-width: 928px) {
+
+  #inNum {
+    font-size: 34px;
+        width: 25%;
+
+  }
+
+  #button1 {
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 1219px) {
+
+  #inNum {
+    font-size: 46px;
+    width: 30%;
+
+  }
+}
+
+@media screen and (min-width: 1300px) {
+
+  #inNum {
+    font-size: 46px;
+    width: 24%;
+
+  }
+
+  #button1 {
+    width: 15%;
+  }
+}
+
+
+
+@media screen and (min-width: 1659px) {
+
+  #inNum {
+    font-size: 46px;
+    width: 20%;
+
+  }
+
+  #button1 {
+    width: 9%;
+  }
+}
+
+
+/*
+@media screen and (min-width: 1146px) {
+
+  #inNum {
+    font-size: 40px;
+        width: 25%;
+
+  }
+
+  #button1 {
+    width: 10%;
+  }
+}
+
+*/
+
+
+
+
+body {
+font-family: 'Titillium Web', sans-serif;
+background: rgba(0, 128, 0, 0.88);
+
+}
+
+#background {
+  position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      background-image: url('dice_bg2.jpg');
+      background-attachment: fixed;
+      background-size: 100%;
+      opacity: 0.7;
+      filter:alpha(opacity=80);
+      -webkit-background-size: cover;
+      text-align: center;
+}
+
+ #mega {
+  background: #60f760;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+ #win {
+  background: #60f760;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+ #looser {
+  background: pink;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+#first {
+width: 120px;
+height: 120px;
+border-radius: 13%;
+}
+
+
+
+
+
+
+
+
+
+/* ANIMATION */
+
+  /* Key frame that sets the cube to rotate it so that each face is presented to the fron in order */
+
+  @-webkit-keyframes spincube {
+   from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+   16%      { -webkit-transform: rotateY(-90deg);                           }
+   33%      { -webkit-transform: rotateY(-180deg) rotateZ(90deg);            }
+   50%      { -webkit-transform: rotateY(-270deg) rotateZ(90deg);           }
+   66%      { -webkit-transform: rotateY(-90deg) rotateX(90deg);             }
+   83%      { -webkit-transform: rotateX(90deg);                            }
+ }
+
+ /*Animation settings for the cubespinner animation */
+  #cubespinner {
+   -webkit-animation-name: spincube;
+   -webkit-animation-timing-function: ease-in-out;
+   -webkit-animation-iteration-count: 3;
+   -webkit-animation-duration: 1s;
+   -webkit-transform-style: preserve-3d;
+   -webkit-transform-origin: 60px 60px 0;
+   margin-left: 25%;
+   margin-top: -50%;
+
+
+ }
+
+
+ #button1 {
+   margin-top: 3%;
+ }
+
+/* Start by using CSS to style and place the six faces of the cube, each side
+will be marked as a div child of the "spinner" element */
+
+#cubespinner div {
+  position:absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+}
+#cubspinner div img {
+  opacity: 0.7;
+}
+
+#cubespinner #face1 {
+  -webkit-transform: translateZ(60px);
+  -webkit-backface-visibility: hidden;
+  border-radius: 14%;
+  opacity: 0.7;
+}
+#cubespinner .face2 {
+  -webkit-transform: rotateY(90deg) translateZ(60px);
+  -webkit-backface-visibility: true;
+  border-radius: 14%;
+  opacity: 0.7;
+               }
+#cubespinner .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+  -webkit-backface-visibility: true;
+  border-radius: 14%;
+  opacity: 0.7;
+ }
+#cubespinner .face4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+  -webkit-backface-visibility: true;
+  border-radius: 14%;
+  opacity: 0.7;
+}
+#cubespinner .face5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+  -webkit-backface-visibility: true;
+  border-radius: 14%;
+  opacity: 0.7;
+}
+#cubespinner .face6 { -webkit-transform: rotateX(-90deg) translateZ(60px);
+  -webkit-backface-visibility: true;
+  border-radius: 14%;
+  opacity: 0.7;
+}
+
+
+
+/*
+If you don't want to see the backs of images in the background you
+can also set -webkit-backface-visibility: hidden; on the face elements.
+
+*/
+
+
+
+
+/* Stage settings */
+
+#stage {
+  /*
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  */
+
+  display: none;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  margin-top: 25%;
+  align-items: center;
+
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+
+.inputNum {
+  margin-top: 12%;
+}
+
+
+#banner {
+  text-align: center;
+  margin-top: 5%;
+}
+
+/*input tag css */
+
+.no-border {
+  border: none !important;
+
+}
+
+  .overlay {
+
+    text-align:right;
+    font-weight: 700;
+    font-size: 77px;
+    height: 100px;
+    letter-spacing: -1.925px;
+    line-height: 100px;
+    width: 40%;
+    padding-left: 0 !important;
+    color: white;
+  }
+
+  ::-webkit-input-placeholder {
+      color: white;
+  }
+
+  .bg-transparent {
+  background-color: transparent !important;
+}
+
+
+/* fin input tag css */

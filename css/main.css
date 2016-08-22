@@ -1,0 +1,86 @@
+
+/* ############First Part#########
+The keyframes block defined here will simply rotate an
+element or group of elements counter-clockwise around
+the Y-axis (which points towards the top of the page):
+*/
+
+  /* all other browsers */
+  /*basically sets the rotation from the 0% to the 100% */
+  @keyframes spinner {
+    from {
+      -webkit-transform: rotateY(0deg);
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -webkit-transform: rotateY(-360deg);
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+  }
+
+/* End of keyframes */
+
+/* Second Part ############# */
+  /* Setting up the stage is the second part, is where our
+  animation takes place */
+
+  #stage {
+  margin: 1em auto;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -ms-perspective: 1200px;
+  perspective: 1200px; /* The perspective property defines how many pixels a 3D element is placed from the view. */
+  background: rgba(0,0,0,0.5); /*transparency */
+}
+
+/* ROTATION */
+/*By default the rotation axis is the centre of the 'stage' element,
+but that can be moved by setting the  transform-origin attribute away from the centre.
+*/ 
+
+
+/* ANIMATION ################### */
+/* This next element will apply the animation to the spinner keygrame */
+/* We will define transition timing function and set the number of iterations */
+/* Each iteration will last 6 seconds */
+
+#spinner {
+    -webkit-animation-name: spinner; /*points the animation to the name keyframe element */
+    /* here below we can use the timing-function in another way, setting it to
+    'ease-in-out' and adding new property, -webkit-animation-direction: alternate,
+    this will result in animation that spins firt one way and then the other */
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite; /* how many times the animation should play, options: number, infinite, initial, inherit */
+    -webkit-animation-duration: 6s; /* how long on speed is the animation going to last */
+
+    /*settings for all browsers */
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+/* The preserved-3d setting is important if you want to be
+able to transform other elements with relation to this one*,
+without this, all child elements are rendered flat in the same plane*/
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #fff;
+  }
+
+/* The hover effect will pause the animation when the mouse is over the element */
+/*This property can also be toggled between 'running' and 'paused'
+using JavaScript to control the state of the animation.
+*/
+  #spinner:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+
+/* end animation */

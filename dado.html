@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'><!-- fonts from google -->
+    <meta charset="utf-8">
+    <title>Juego Dado</title>
+    <!-- boostrap -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- boostrap js -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/cube.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body onload="setFocus()">
+    <div id="background">
+      <div class="inputNum">
+      <!-- <p id="inNum" contenteditable="true">Ingresa un número</p> -->
+      <input id="inNum" class="no-border overlay bg-transparent" value placeholder="Ingresa un número" autocomplete="off" spellcheck="false" type="text"  oninput="setPosVal()">
+    </br>
+        <button class="btn btn-success" id="button1" type="button" onclick="showDivs()">PLAY</button>
+      </div>
+    </div>
+    <div id="banner"></div>
+    <div id="stage">
+
+        <div id="cubespinner">
+          <div id="face1">
+            <img id="first" src="images/dice1.png" alt style="width: 120px" />
+          </div>
+          <div class="face2">
+            <img src="images/dice2.png" alt="" />
+          </div>
+          <div class="face3">
+            <img src="images/dice3.png" alt="" />
+          </div>
+          <div class="face4">
+            <img src="images/dice4.png" alt="" />
+          </div>
+          <div class="face5">
+            <img src="images/dice5.png" alt="" />
+          </div>
+          <div class="face6">
+            <img src="images/dice6.png" alt="" />
+          </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/dado.js">
+    </script>
+  </body>
+</html>
