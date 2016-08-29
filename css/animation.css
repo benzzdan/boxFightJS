@@ -172,7 +172,7 @@ body {
 
 .boxeador {
   width: 130px;
-  height: 210px;
+  height: 200px;
   background-image: url('../images/gordoBox.png');
   background-position: -501px -18px;
   position: absolute;
@@ -311,7 +311,7 @@ display: none;
 
 #btnBox2 {
   position: absolute;
-top: 91%;
+top: 97%;
 left: 13%;
 display: none;
 }

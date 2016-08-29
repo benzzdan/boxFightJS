@@ -50,7 +50,7 @@ function dado(){
         //background-size: "200px 200px"});
         //alert(b1.name+" pego!----> "+b1.name+" HP:"+b1.hp+"---- "+b2.name+" HP:"+b2.hp); //alerta para saber que si pego
         if(b2.hp <= 0){ //se checa si tiene vida todavia el boxeador2
-            document.getElementById('msg').innerHTML=b1.name+" gano la pelea!";
+            document.getElementById('msg').innerHTML=b1.name+" won!";
             r=5; //para que el programa termine
             b1.sps= 0; // para que terminen los whiles
             b2.sps = 0; //para que no se ejecute el while del boxeador 2
@@ -83,7 +83,7 @@ function dado(){
          //alert(b1.name+" pego!----> "+b1.name+" HP:"+b1.hp+"---- "+b2.name+" HP:"+b2.hp); //alerta para saber que si pego
          if(b1.hp <= 0){ //se checa si tiene vida todavia el boxeador2
              setTimeout(function(){
-               document.getElementById('msg').innerHTML=b2.name+" gano la pelea!";
+               document.getElementById('msg').innerHTML=b2.name+" won!";
              }, 2000);
              r=5; //para que el programa termine
              b1.sps= 0; // para que terminen los whiles
@@ -130,11 +130,11 @@ function dado(){
      $('#btnBox1').css("display", "none");
      if(b1.hp > b2.hp){
        setTimeout(function(){
-         document.getElementById('msg').innerHTML=b1.name+"gano la pelea!";
+         document.getElementById('msg').innerHTML=b1.name+" won!";
        }, 500);
      }else{
        setTimeout(function(){
-         document.getElementById('msg').innerHTML=b2.name+"gano la pelea!";
+         document.getElementById('msg').innerHTML=b2.name+" won!";
        }, 500);
      }
 
